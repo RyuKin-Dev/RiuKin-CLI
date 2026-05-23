@@ -1,0 +1,1 @@
+"""Skills module - extensible capabilities"""

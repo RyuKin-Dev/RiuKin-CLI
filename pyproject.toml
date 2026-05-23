@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "riukin-cli"
+version = "0.1.0"
+description = "A CLI tool for streamlined workflow automation and development tasks"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+dependencies = [
+    "click>=8.0.0",
+]
+
+[project.scripts]
+riukin = "riukin_cli.main:cli"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=22.0.0",
+    "flake8>=4.0.0",
+]
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+
+[tool.hatch.build.targets.wheel]
+packages = ["riukin_cli"]
