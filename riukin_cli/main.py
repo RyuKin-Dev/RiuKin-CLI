@@ -7,6 +7,7 @@ from .skills.github_skill import github_group
 from .skills.web_skill import web_group
 from .skills.file_skill import file_group
 from .skills.system_skill import system_group
+from .skills.blender_skill import blender_group
 
 
 @click.group()
@@ -21,6 +22,7 @@ cli.add_command(github_group)
 cli.add_command(web_group)
 cli.add_command(file_group)
 cli.add_command(system_group)
+cli.add_command(blender_group)
 
 
 @cli.command()
